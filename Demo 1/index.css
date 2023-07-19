@@ -1,0 +1,247 @@
+p {
+    color: #fbfefe;
+    font-family: Sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.main-body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #1b1010;
+    display: flex;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.main {
+    flex-direction: column;
+    align-items: center;
+    background-color: #385755;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+}
+
+.header-container {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    border-radius: 50px;
+    border-width: 0.1px;
+    border-color: grey;
+    border-style: solid;
+}
+
+.header-first-container {
+    padding-left: 20px;
+}
+
+.header-first-container-text {
+    color: white;
+    font-family: Sans-serif;
+}
+
+.header-middle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.header-middle-container-text {
+    font-family: Sans-serif;
+    color: white;
+    font-weight: 100;
+}
+
+.header-last-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+}
+
+.header-last-container-logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    width: 80%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-first-container {
+    height: 85%;
+    background: rgb(20, 20, 24);
+    width: 250px;
+    border-radius: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    left: 35px;
+    z-index: 2;
+}
+
+.body-first-container-first-box {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 135px;
+}
+
+.body-first-container-first-box-text {
+    height: 10px;
+    color: white;
+}
+
+.body-first-container-button {
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #f7b941;
+    color: black;
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.body-second-container {
+    height: 85%;
+    background: rgb(77, 77, 107);
+    width: 250px;
+    border-radius: 120px;
+    z-index: 1;
+}
+
+.body-second-container-images {
+    width: 100%;
+    border-radius: 130px;
+    height: 100%;
+}
+
+.body-third-container {
+    height: 85%;
+    width: 250px;
+    border-radius: 120px;
+    position: relative;
+    right: 25px;
+}
+.body-third-container-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 130px;
+}
+
+.body-third-container-text-container {
+    position: absolute;
+    top: -25px;
+    right: 44px;
+    height: 50px;
+}
+
+.body-third-container-text {
+    height: 10px;
+    color: white;
+}
+
+.footer {
+    height: 80px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-first-container{
+    height: 100%;
+    width: 175px;
+}
+.footer-first-container-text{
+    font-family: Sans-serif;
+    color:white;
+    font-weight: 100;
+    font-size: 22px;
+}
+.footer-middle-container{
+    width:40%;
+}
+.footer-middle-container-text{
+    font-family: Sans-serif;
+    color:white;
+    font-weight: 100;
+}
+.footer-last-container{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+.footer-last-container-logos{
+    display: flex;
+}
+.footer-last-container-logos-container{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+.footer-last-container-logos-first-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+.footer-last-container-logos-second-image{
+    right: 10px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+.footer-last-container-logos-third-image{
+    right: 10px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    right: 10px;
+}
+.footer-last-container-icons{
+    margin-left: 10px;
+}
+.material-symbols-outlined{
+    color: white;font-size: 25px;
+}
+@media screen and (max-width:400px) {
+    .body-first-container{
+        width: 100%;
+        height: 10px;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Form
+    </title>
+
+</head>
+
+<body>
+    <div style="display: flex;justify-content: center;margin-top: 50px;height: 100%;">
+        <div style="height: 600px;width: 400px;background-color: lightgrey;border-radius: 10px;color: white;">
+            <h3 style="text-align: center;">Form</h3>
+            <div style="display: flex;flex-direction: column;align-items: center;">
+                <div style="display: flex;height: 30px;align-items: center;margin-bottom: 15px;">
+                    <p>First Name</p>
+                    <input type="text" placeholder="First name" id="fname"
+                        style="height: 30px;border-radius: 5px;border: none;margin-left:10px;padding-left: 10px ;" />
+                </div>
+                <div style="display: flex;height: 30px;align-items: center;margin-bottom: 15px;">
+                    <p>Last Name</p>
+                    <input type="text" placeholder="Last name" id="lname"
+                        style="height: 30px;border-radius: 5px;border: none;margin-left:10px;padding-left: 10px ;" />
+                </div>
+                <div style="display: flex;align-items: center;width: 250px;">
+                    <p style="margin-right: 20px;">Gender</p>
+                    <input type="radio" name="gender" value="male"  onchange="handleGender(this)">Male
+                    <input type="radio" name="gender" value="female"  onchange="handleGender(this)">Female
+                </div>
+                <button id="button" type="submit" style="height: 30px;width:100px;border-radius: 10px;"
+                    onclick="handleForm()">Submit</button>
+            </div>
+            <div style="display: flex;flex-direction:column;align-items: center;">
+                <h3> The values are: </h3>
+                <div style="display: flex;flex-direction: column;">
+                    <p id="displayfname"></p>
+                    <p id="displaylname"></p>
+                    <p id="displaygender"></p>
+                    <p id="displaymale"></p>
+                    <p id="displayfemale"></p>
+                </div>
+            </div>
+            <script>
+                let gender;
+                function handleGender(e){
+                    gender = e.value
+                }
+                function handleForm() {
+                    let x = document.getElementById("fname").value
+                    document.getElementById("displayfname").innerHTML = x
+                    let y = document.getElementById("lname").value
+                    document.getElementById("displaylname").innerHTML = y
+                    document.getElementById('displaygender').innerHTML = gender
+
+
+                    // var ele = document.getElementById('gender')
+                    // console.log(ele)
+                    // for (i = 0; i < ele.length; i++) {
+                    //     if (ele[i].checked)
+                    //         document.getElementById("result").innerHTML = "Gender: " + ele[i].value;
+                    // }
+
+                    // function maleClick() {
+                    //     let m = document.getElementById("male").value
+                    //     document.getElementById("displaymale").innerHTML = m
+                    //     console.log(m)
+                    // }
+
+                    // function femaleClick() {
+                    //     let f = document.getElementById("female").value
+                    //     document.getElementById("displayfemale").innerHTML = f
+                    //     console.log(f)
+                    // }
+                }
+
+                // function displayGender() {
+                //      let t = document.getElementById("gender").value 
+                //      console.log(t)
+                // }
+
+                // function maleClick() {
+                //     let m = document.getElementById("male").value
+                //     document.getElementById("displaymale").innerHTML = m
+                //     console.log(m)
+                // }
+
+                // function femaleClick() {
+                //     let f = document.getElementById("female").value
+                //     document.getElementById("displayfemale").innerHTML = f
+                //     console.log(f)
+                // }
+            </script>
+        </div>
+    </div>
+</body>
+
+
+</html>

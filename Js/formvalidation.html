@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>
+        Form Validation
+    </title>
+</head>
+
+<body
+    style="margin: 0;padding: 0;height: 100vh;width: 100%;display: flex;align-items: center;justify-content: center;background-color: black;">
+    <div>
+        <form name="form" onsubmit="submitForm()"
+            style="background-color:white;height: 220px;width: 400px;border-radius: 20px;display: flex;flex-direction: column;align-items: center;">
+            <h3>Form Validation</h3>
+            <div style="display: flex;align-items: center;width: 300px;">
+                <p style="font-weight: bold;margin-right: 24px;">Email</p>
+                <input type="email" name="email" placeholder="Type ur email" autocomplete="off"
+                    style="padding-left: 10px;margin-left: 10px;border:1px solid grey;border-radius: 5px;height: 25px;width: 240px;">
+                </input>
+            </div>
+            <div style="display: flex;align-items: center;width: 300px;">
+                <p style="font-weight: bold;">Password</p>
+                <input type="password" name="password" placeholder="Type ur Password" minlength="8" maxlength="32"
+                    style="padding-left: 10px;margin-left: 10px;border:1px solid grey;border-radius: 5px;height: 25px;width: 250px;" />
+                </input>
+                <span class="material-symbols-outlined" style="font-size: 15px;position: relative;right: 20px;"
+                    onclick="toggleVisible()">
+                    visibility
+                </span>
+            </div>
+            <input type="submit"
+                style="height: 30px;width: 100px;border-radius: 10px;border: 1px solid grey;background-color: rgb(85, 76, 76);color: white;margin-top: 10px;">
+            </input>
+        </form>
+        <div
+            style="background-color: white;height: 200px;width: 400px;border-radius: 10px;display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 20px;">
+            <div style="display: flex;">
+                <p style="font-weight: bold;margin-right: 10px;">Email:</p>
+                <p id="emailValue"></p>
+            </div>
+            <div style="display: flex;">
+                <p style="font-weight: bold;margin-right: 10px;">Password:</p>
+                <p id="passwordValue"></p>
+            </div>
+        </div>
+        <script>
+
+            //CHANGE PASSWORD VISIBILITY FROM HIDDEN TO TEXT
+            function toggleVisible() {
+
+                let x = document.forms["form"]["password"].type;
+                if (x == "password") {
+                    document.forms["form"]["password"].type = "text"
+                } else {
+                    document.forms["form"]["password"].type = "password"
+                }
+            }
+
+            //FORM VALIDATION (EMAIL AND PASSWORD WITH REGEX)
+            function submitForm() {
+                event.preventDefault();
+                var regPassword = /^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{8,32}$/;
+                var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+                var email = document.forms["form"]["email"].value;
+                var password = document.forms["form"]["password"].value;
+                if (email = '' || !regEmail.test(email)) {
+                    alert("Please enter valid email");
+                    alert("Please enter valid password");
+                } else {
+                    var validatedEmail = document.forms["form"]["email"].value;
+                }
+                if (password = '' || !regPassword.test(password)) {
+                    alert("Please enter valid password");
+                } else {
+                    var validatedPassword = document.forms["form"]["password"].value;
+                    document.getElementById("passwordValue").innerText = validatedPassword;
+                    document.getElementById("emailValue").innerText = validatedEmail;
+                }
+            }
+        </script>
+        <div>
+
+        </div>
+    </div>
+</body>
+
+</html>
